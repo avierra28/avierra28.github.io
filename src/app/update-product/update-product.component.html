@@ -1,0 +1,29 @@
+<div class="delete-product">
+    <h2>Update Product</h2>
+    
+    <!-- Search form -->
+    <form (ngSubmit)="onSearch()">
+      <div class="form-group">
+        <label for="productId">Enter Product ID to Update:</label>
+        <input type="text" id="productId" [(ngModel)]="productId" name="productId" required>
+      </div>
+      <button type="submit">Search</button>
+    </form>
+    
+    <!-- Display product information if found -->
+    <div *ngIf="product" class="product-details">
+      <h3>Product Found</h3>
+      <p><strong>Name:</strong> {{ product.name }} <input type="text" [(ngModel)]="object.name"/></p>
+      <p><strong>Description:</strong> {{ product.description }} <input type="text" [(ngModel)]="object.description"/></p>
+      <p><strong>Price:</strong> {{ product.price }} <input type="text" [(ngModel)]="object.price"/></p>
+      
+      <!-- Confirmation for deletion -->
+      <button (click)="confirmUpdate()">Update Product</button>
+    </div>
+    
+    <!-- Message for when product is not found or other messages -->
+    <div *ngIf="message" class="message">
+      <p>{{ message }}</p>
+    </div>
+  </div>
+  

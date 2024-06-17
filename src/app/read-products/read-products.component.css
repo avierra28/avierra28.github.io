@@ -1,0 +1,29 @@
+table {
+    width: 40%; /* Adjust as needed */
+    margin: 50px auto; /* Center the table horizontally */
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+thead {
+    background-color: #f2f2f2;
+}
+
+th, td {
+    padding: 6px 10px; /* Adjust padding to reduce column width */
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:nth-child(even):hover {
+    background-color: #e0e0e0;
+}
+
